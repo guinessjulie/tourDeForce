@@ -1,0 +1,29 @@
+<html>
+    <head> </head>
+    <body>
+    <canvas id="graph" width="600" height="400"></canvas>
+    <script src="graph.min.js" type=text/javascript></script>
+        <script>
+            var WIDTH = 800;
+            var HEIGHT = 800;
+            var STIFFNESS = 0.6;
+            var REPULSION = 15;
+            var DAMPING = 0.1;
+            var graph = new Graph("graph", WIDTH, HEIGHT, STIFFNESS, REPULSION, DAMPING);
+
+            graph.addNode('France');
+            graph.addNode("hollande");
+            graph.addNode('cheese');
+            graph.addNode('sarkozy');
+            graph.addNode('paris');
+            graph.addVertice("France", "hollande");
+            graph.addVertice("France", "cheese");
+            graph.addVertice("hollande", "sarkozy");
+            graph.addVertice("hollande", "paris");
+            graph.addVertice("hollande", "cheese");
+            graph.run();
+        </script>
+
+
+</body>
+</html>
